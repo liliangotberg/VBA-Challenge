@@ -1,0 +1,18 @@
+Sub DeleteSheet()
+
+Dim Chrissheet As Worksheet
+
+    Application.Display Alerts = False
+        For Each Chrissheet in ActiveWorkbook.Sheets
+
+            If Chrissheet.Index > 2 Then
+            Chrissheet. Delete 
+            End If
+    
+        Next Chrissheet
+
+    Application.Display Alerts = True
+
+'?? does Dim have a closing phrase
+
+End Sub

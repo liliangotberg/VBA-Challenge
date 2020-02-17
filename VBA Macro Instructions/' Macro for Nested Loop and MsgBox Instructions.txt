@@ -1,0 +1,39 @@
+VBA Nested Loops 
+'Nested For Loop
+
+"Subroutine MacroTitle()
+Sub ClassScanner()
+    
+    'Determine Variable As ...
+    '...Sting for words or Integer for whole numbers
+    Dim TargetStudent As String
+    
+    'Loop through the rows
+    'i is rows selected = cell, array or range
+    For i = 1 To 3
+
+        ' Loop through the columns
+        'j is column selected = cell, array, range
+        For j = 1 To 5
+
+
+            'Instructions to use Message Box in Worksheet to use Excel directory information such as Names, Count
+            'Format- MsgBox ("" & "" & "").Value)          
+            
+            'Ex1 - Print the Student Name      
+            MsgBox ("Row: " & i & " Column: " & j & " | " & Cells(i, j).Value)
+            'Row " " is for rows selected
+            'Column " " is for columns selected
+            'Cells " " is for cells selected
+
+            'Ex2 - Count how many sheets in ActiveWorkbook
+            MsgBox ActiveWorkbook.sheet.Count
+
+        'loop to repeat macro in j column
+        Next j
+
+    'loop to repeat macro in i rows
+    Next i
+
+'Terminate Subroutine
+End Sub
